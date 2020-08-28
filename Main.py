@@ -158,7 +158,7 @@ def on_right_click(mouse_position):
         flag_number += 1
     elif flag_number == 0:      # If no more flags are left exit
         return
-    else:       # Has flags left and cell is unflagged
+    else:       # Has flags left and cell is not flagged
         clicked_cell.flagged = True
         draw_image(f'media/{DIFFICULTY}/flagged.png', x * block_size, y * block_size)
         flag_number -= 1
@@ -193,7 +193,6 @@ def get_current_time():
     return time_difference
 
 
-# FINISH TOMORROW
 def on_settings_click(mouse_position):
     # Getting the coordinates
     x = mouse_position[0]
